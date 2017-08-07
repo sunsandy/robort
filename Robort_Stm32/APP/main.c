@@ -20,8 +20,23 @@ App_Robort_Dat_Tag g_ProtocolData = {0};
     
 u8 u[17]="\r\nDMA ²âÊÔ³É¹¦\r\n";
 u8 w[17]="\r\nDMA ÖÐ¶Ï²âÊÔ\r\n";
+
+/****************************************************************************************
+// System clock is configured defaultly in /STARTUP/startup_stm32f10x_hd.s line 152,
+// in the function SystemInit(), by define SYSCLK_FREQ_72MHz. 
+//      
+//                    --PreScale1 - APB2(72M)
+//                   |
+//                   |
+// HSE(8M)->PLL(9) - |--PreScale1 - HCLK(72M)
+//                   |
+//                   |__PreScale2 - APB1(36)
+//
+//
+*****************************************************************************************/
 int main(void)
 {
+	  
 	  delay_init();
     TIMER_Init();
     Robort_Beep_Init();
@@ -36,6 +51,7 @@ int main(void)
 
     while (1)
     {
+			
 			
 			Hardware_Test();
 			

@@ -2654,38 +2654,38 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        56          4          0          0          0        599   app_beep.o
-        28         10          0          0        404       1642   app_gps.o
-        88         10          0          0          0       1695   app_light.o
-         4          0          0          0          0        519   app_message.o
-       140          6          0          0          0        636   app_motor.o
-        32          0          0          0          0        593   app_protocol.o
-       284         14          0          0          0       3147   app_steer.o
-        18          0          0          0          0        944   bsp_gpio.o
-       200         18          0          2        512       2842   bsp_gps.o
-      1044         40          0          0          0       4678   bsp_pwm.o
-       112         18          0          8          0       1420   bsp_systick.o
-       228         16          0         12          0       2859   bsp_timer.o
-       856         62          0          8        150       6812   bsp_uart.o
-        64          8          0         12          0       3141   context.o
+        56          4          0          0          0        503   app_beep.o
+        28         10          0          0        404       1350   app_gps.o
+        88         10          0          0          0       1395   app_light.o
+         4          0          0          0          0        423   app_message.o
+       140          6          0          0          0        540   app_motor.o
+        32          0          0          0          0        497   app_protocol.o
+       284         14          0          0          0       2755   app_steer.o
+        18          0          0          0          0        752   bsp_gpio.o
+       200         18          0          2        512       2362   bsp_gps.o
+      1044         40          0          0          0       4086   bsp_pwm.o
+       112         18          0          8          0       1132   bsp_systick.o
+       228         16          0         12          0       2371   bsp_timer.o
+       856         62          0          8        150       5844   bsp_uart.o
+        64          8          0         12          0       2753   context.o
          0          0          0          0          0       4504   core_cm3.o
-         0          0          0          0          0       1660   generate.o
-        28          0          0          0          0       2209   info.o
-        84          0          0          0          0       7719   main.o
-       144         16          0          0          0       2317   misc.o
-        80         26          0          0          0       2377   parser.o
-        36          8        304          0       5120        928   startup_stm32f10x_hd.o
-       380         26          0          0          0       5595   stm32f10x_dma.o
-       170          0          0          0          0       3112   stm32f10x_gpio.o
-        56         24          0          0          0       5728   stm32f10x_it.o
-       264         46          0         20          0       6708   stm32f10x_rcc.o
-       802         90          0          0          0      13019   stm32f10x_tim.o
-       464         26          0          0          0       7771   stm32f10x_usart.o
-       248         24          0         20          0     259749   system_stm32f10x.o
-        22          0          0          0          0       1560   time.o
+         0          0          0          0          0       1464   generate.o
+        28          0          0          0          0       1917   info.o
+        84          0          0          0          0       6851   main.o
+       144         16          0          0          0       1929   misc.o
+        80         26          0          0          0       2085   parser.o
+        36          8        304          0       5120        856   startup_stm32f10x_hd.o
+       380         26          0          0          0       4915   stm32f10x_dma.o
+       170          0          0          0          0       2720   stm32f10x_gpio.o
+        56         24          0          0          0       4668   stm32f10x_it.o
+       264         46          0         20          0       5920   stm32f10x_rcc.o
+       802         90          0          0          0      11171   stm32f10x_tim.o
+       464         26          0          0          0       6803   stm32f10x_usart.o
+       248         24          0         20          0     258685   system_stm32f10x.o
+        22          0          0          0          0       1268   time.o
 
     ----------------------------------------------------------------------
-      5956        492        336         84       6192     356483   Object Totals
+      5956        492        336         84       6192     342519   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         24          0          0          2          6          0   (incl. Padding)
 
@@ -2744,8 +2744,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9864        618        336         96       6192     352743   Grand Totals
-      9864        618        336         96       6192     352743   ELF Image Totals
+      9864        618        336         96       6192     338779   Grand Totals
+      9864        618        336         96       6192     338779   ELF Image Totals
       9864        618        336         96          0          0   ROM Totals
 
 ==============================================================================
