@@ -143,6 +143,10 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGUARM</Key>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>ARMRTXEVENTFLAGS</Key>
           <Name>-L70 -Z18 -C0 -M0 -T1</Name>
         </SetRegEntry>
@@ -171,34 +175,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>28</LineNumber>
+          <LineNumber>40</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134231612</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>E:\鏈哄櫒浜洪」鐩?椤圭洰2 鑷富璁捐鏈哄櫒浜?鐩稿叧寮€婧愯蒋浠?GPS鎺у埗\Robort_Stm32_161026GPS涓婁紶_鍗忚\Robort_Stm32\Project\APP\main.c</Filename>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\..\Libraries\CMSIS\system_stm32f10x.h</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>36</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134231640</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>E:\鏈哄櫒浜洪」鐩?椤圭洰2 鑷富璁捐鏈哄櫒浜?鐩稿叧寮€婧愯蒋浠?GPS鎺у埗\Robort_Stm32_161026GPS涓婁紶_鍗忚\Robort_Stm32\Project\APP\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\Robort_Stm32\../../APP/main.c\36</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -291,7 +279,7 @@
 
   <Group>
     <GroupName>CMSIS</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
