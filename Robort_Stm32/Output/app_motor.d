@@ -14,4 +14,5 @@
 ..\..\output\app_motor.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\app_motor.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
 ..\..\output\app_motor.o: ..\..\Libraries\FWlib\inc\misc.h
+..\..\output\app_motor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 ..\..\output\app_motor.o: ..\..\BSP\BSP_Pwm.h

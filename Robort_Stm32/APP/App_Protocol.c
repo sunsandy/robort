@@ -239,16 +239,16 @@ static uint8 Process_Robort_Beep_Cmd(App_Robort_Dat_Tag *pdata)
 {
 	if (pdata == NULL)
 		return 0;
-	
+
 	if (pdata->Cmd == APP_ROBORT_CMD_BEEP_ON)
 	{
 		Robort_Beep_Control(ROBORT_BEEP_ON);
 	}
-    else
-    {
-        Robort_Beep_Control(ROBORT_BEEP_OFF);
-    }
-	
+	else
+	{
+			Robort_Beep_Control(ROBORT_BEEP_OFF);
+	}
+
 	return 1;
 }
 

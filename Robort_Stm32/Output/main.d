@@ -27,6 +27,7 @@
 ..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 ..\..\output\main.o: ..\..\APP\App_Motor.h
 ..\..\output\main.o: ..\..\BSP\BSP_Gpio.h
+..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 ..\..\output\main.o: ..\..\APP\App_Steer.h
 ..\..\output\main.o: ..\..\APP\App_Light.h
 ..\..\output\main.o: ..\..\APP\App_Beep.h

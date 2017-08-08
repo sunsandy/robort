@@ -23,9 +23,11 @@ u8 w[17]="\r\nDMA 中断测试\r\n";
 
 /****************************************************************************************
 // System clock is configured defaultly in /STARTUP/startup_stm32f10x_hd.s line 152,
-// in the function SystemInit(), by define SYSCLK_FREQ_72MHz. 
-//      
-//                    --PreScale1 - APB2(72M)
+// in the function SystemInit(), by define SYSCLK_FREQ_72MHz.
+//                                                                 
+//                                               -- GPIO
+//                                              |
+//                    --PreScale1 - APB2(72M) — | 
 //                   |
 //                   |
 // HSE(8M)->PLL(9) - |--PreScale1 - HCLK(72M)
@@ -37,34 +39,32 @@ u8 w[17]="\r\nDMA 中断测试\r\n";
 int main(void)
 {
 	  
-	  delay_init();
-    TIMER_Init();
-    Robort_Beep_Init();
-    Robort_Light_Init();
-    Robort_Motor_Init();
-    Robort_Steer_Init();
-    Robort_Uart_Init();
-		Robort_GPS_Init(); 
-		GPS_DATA_Init(); 
+	delay_init();
+	TIMER_Init();
+	Robort_Beep_Init();
+	Robort_Light_Init();
+	Robort_Motor_Init();
+	Robort_Steer_Init();
+	Robort_Uart_Init();
+	Robort_GPS_Init(); 
+	GPS_DATA_Init(); 
 //		printf("\r\n系统初始化完毕\r\n");
     Steer_Test( );
 
     while (1)
     {
-			
-			
-			Hardware_Test();
-			
-//				Robort_Get_Nema();
-//        if (Robort_Receive_Frame(&g_ProtocolData) == RET_OK)
-//        {
-//          Protocol_Parser(&g_ProtocolData);		
-//        }
-//				if(Task_50ms)
-//				{
-//					Task_50ms=0;	
-//					GPS_Message_Upload();
-//				}
+		Hardware_Test();
+		
+		Robort_Get_Nema();
+		if (Robort_Receive_Frame(&g_ProtocolData) == RET_OK)
+		{
+			Protocol_Parser(&g_ProtocolData);		
+		}
+		if(Task_50ms)
+		{
+			Task_50ms=0;	
+			GPS_Message_Upload();
+		}
     }
 
  
