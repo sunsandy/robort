@@ -2,7 +2,7 @@
 #define _BSP_GPIO_H
 
 #include "stm32f10x.h"
-#include <assert.h>
+#include "stm32f10x_conf.h"
 typedef enum
 {
 	U_GPIO_A = 0,
@@ -33,6 +33,18 @@ typedef enum
 	U_PIN_14,
 	U_PIN_15,
 }GPIO_PIN_TAG;
+
+typedef enum
+{
+	U_MODE_AIN=0,
+	U_MODE_FLOATING,
+	U_MODE_IPD,
+	U_MODE_IPU,
+	U_MODE_OUT_OD,
+	U_MODE_OUT_PP,
+	U_MODE_AF_OD,
+	U_MODE_AF_PP,
+};
 
 
 typedef enum

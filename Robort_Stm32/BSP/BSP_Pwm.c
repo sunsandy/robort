@@ -22,7 +22,7 @@ void TIM2_PWM_Init(u16 arr,u16 psc)
 
 	
 	TIM_TimeBaseStructure.TIM_Period = arr; //设置在下一个更新事件装入活动的自动重装载寄存器周期的值	 80K
-	TIM_TimeBaseStructure.TIM_Prescaler =psc; //设置用来作为TIMx时钟频率除数的预分频值  不分频
+	TIM_TimeBaseStructure.TIM_Prescaler = psc; //设置用来作为TIMx时钟频率除数的预分频值  不分频
 	TIM_TimeBaseStructure.TIM_ClockDivision = 1; //设置时钟分割:TDTS = Tck_tim
 	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;  //TIM向上计数模式
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure); //根据TIM_TimeBaseInitStruct中指定的参数初始化TIMx的时间基数单位
@@ -51,7 +51,7 @@ void TIM2_PWM_Init(u16 arr,u16 psc)
 	TIM_SetCompare2(TIM2,100);
 	TIM_SetCompare3(TIM2,100);
 	TIM_SetCompare4(TIM2,100);
-	TIM_Cmd(TIM2, ENABLE);  //使能TIM1
+	TIM_Cmd(TIM2, ENABLE);  //使能TIM2
    
 }
 /********************************************************************************
@@ -228,8 +228,8 @@ void STM32_TIMER3_PWMControl(u8 pwmNo, u32 period, u16 dutyCycle)
 		{
 			case TIM3_PWM1: TIM_SetCompare1(TIM3,Temp); break;
 			case TIM3_PWM2: TIM_SetCompare2(TIM3,Temp); break;
-			case TIM3_PWM3 : TIM_SetCompare3(TIM3,Temp); break;
-			case TIM3_PWM4 : TIM_SetCompare4(TIM3,Temp); break;
+			case TIM3_PWM3: TIM_SetCompare3(TIM3,Temp); break;
+			case TIM3_PWM4: TIM_SetCompare4(TIM3,Temp); break;
 			default:                             break;
 	}
 }

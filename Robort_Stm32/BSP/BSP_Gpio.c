@@ -41,7 +41,7 @@ void STM32_GPIO_ConfgPin(uint8_t gpio, uint8_t pin, uint8_t mode)
 			RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOG, ENABLE);
 		break;
 		default:
-			assert(0);
+			assert_param(0);
 		break;
 	}
 	
@@ -65,10 +65,27 @@ void STM32_GPIO_ConfgPin(uint8_t gpio, uint8_t pin, uint8_t mode)
 		case U_PIN_15: in_pin = GPIO_Pin_15; break;
 
 		default:
-			assert(0);
+//assert(0);
 		break;
 	}
 
+	switch (mode)
+	{
+		case U_MODE_AIN: 		in_mode = GPIO_Mode_AIN; 			break;
+		case U_MODE_FLOATING: 	in_mode = GPIO_Mode_IN_FLOATING; 	break;
+		case U_MODE_IPD: 		in_mode = GPIO_Mode_IPD; 			break;
+		case U_MODE_IPU: 		in_mode = GPIO_Mode_IPU; 			break;
+		case U_MODE_OUT_OD: 	in_mode = GPIO_Mode_Out_OD; 		break;
+		case U_MODE_OUT_PP:		in_mode = GPIO_Mode_Out_PP; 		break;
+		case U_MODE_AF_OD: 		in_mode = GPIO_Mode_AF_OD; 			break;
+		case U_MODE_AF_PP: 		in_mode = GPIO_Mode_AF_PP; 			break;
+		default:
+			//assert(0);
+		break;
+	}
+
+	
+	
 	GPIO_InitStructure.GPIO_Pin   = in_pin;      
   	GPIO_InitStructure.GPIO_Mode  = in_mode;		
   	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;

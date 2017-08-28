@@ -6,7 +6,7 @@
 
 #define uint8 unsigned char  
  
-#define ANGLE0_DUTY_CYCLE 25   //Duty cycle which steer stays angle-0
+#define ANGLE0_DUTY_CYCLE 35   //Duty cycle which steer stays angle-0
 #define ANGLE180_DUTY_CYCLE 125 
  
 #define ANGLE_MAX_ANGLE 180

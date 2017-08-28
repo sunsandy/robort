@@ -27,6 +27,7 @@ typedef struct
 	uint8 Crc_H;            //crc check MSB
 }App_Robort_Dat_Tag;
 
+//void _NOP() {;};
 
 void GPS_Message_Upload( void);
 void Robort_Send_Frame(App_Robort_Dat_Tag *pdata) ;

@@ -22,29 +22,36 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 E:\gitHub\robort\Robort_Stm32\Project\RVMDK£¨uv4£©\Robort_Stm32.uvprojx
-Project File Date:  06/04/2017
+Project File Date:  08/09/2017
 
 <h2>Output:</h2>
 Build target 'Robort_Stm32'
 compiling main.c...
-..\..\APP\main.c(91): warning:  #111-D: statement is unreachable
-       delay_ms(1000);
-..\..\APP\main.c: 1 warning, 0 errors
-compiling App_Beep.c...
-compiling App_Light.c...
-compiling App_Motor.c...
-..\..\APP\App_Motor.c(14): warning:  #188-D: enumerated type mixed with another type
-      static DIRECTION_TAG preDir = MOTOR_NONE;
-..\..\APP\App_Motor.c: 1 warning, 0 errors
+..\..\BSP\BSP_Gpio.h(47): warning:  #375-D: declaration requires a typedef name
+  };
+..\..\APP\main.c(60): warning:  #174-D: expression has no effect
+                __NOP; 
+..\..\APP\main.c(80): warning:  #177-D: variable "ProtocolData" was declared but never referenced
+       App_Robort_Dat_Tag ProtocolData = {0};
+..\..\APP\main.c(81): warning:  #177-D: variable "SensorEntry" was declared but never referenced
+       uSensorInfoTag SensorEntry = {0};
+..\..\APP\main.c(191): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\APP\main.c: 5 warnings, 0 errors
+compiling App_Steer.c...
+..\..\APP\App_Steer.c(122): warning:  #68-D: integer conversion resulted in a change of sign
+                return -1;
+..\..\APP\App_Steer.c: 1 warning, 0 errors
 compiling App_Protocol.c...
+..\..\BSP\BSP_Gpio.h(47): warning:  #375-D: declaration requires a typedef name
+  };
 ..\..\APP\App_Protocol.c(272): warning:  #188-D: enumerated type mixed with another type
                  fSensorType = pdata->Data[0]; //angle data
-..\..\APP\App_Protocol.c: 1 warning, 0 errors
-compiling BSP_Gpio.c...
+..\..\APP\App_Protocol.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=9864 RO-data=336 RW-data=96 ZI-data=6192  
+Program Size: Code=11008 RO-data=336 RW-data=80 ZI-data=1176  
 FromELF: creating hex file...
-"..\..\Output\Robort_Stm32.axf" - 0 Error(s), 3 Warning(s).
+"..\..\Output\Robort_Stm32.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   E:\gitHub\robort\Robort_Stm32\Project\RVMDK£¨uv4£©\RTE

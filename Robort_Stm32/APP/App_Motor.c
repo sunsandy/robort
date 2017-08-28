@@ -84,7 +84,7 @@ static uint16  CalPWMDutyCycle(unsigned char speed)
 	return DutyCycle;
 }
 
-
+//speed: 0~100
 static void Set_Motor_Speed(MOTOR_TAG motorNo, uint8 speed)
 {
     static MOTOR_TAG preMotorNo;
@@ -216,7 +216,7 @@ void Robort_Direction_Control(ROBORT_DIRECTION_TAG dir, uint8 speed)
     }  
 }
 
-
+//if set speed, then robort move by the new speed next time
 void  Robort_Speed_Control(ROBORT_SPEED_TAG robort_dir, unsigned char robort_speed)
 {
     gFlagSpeedRset = 1;   //标志为1，代表客户端设定了速度
