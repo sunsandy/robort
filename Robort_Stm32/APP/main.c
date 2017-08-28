@@ -80,13 +80,13 @@ static void Hardware_Test()
      App_Robort_Dat_Tag ProtocolData = {0};
      uSensorInfoTag SensorEntry = {0};
 			 
-//	while (1)
-//	{
-//		Robort_Light_Control( ROBORT_LIGHT_ONE, ROBORT_LIGHT_ON);
-//		delay_ms(1000);
-//		Robort_Light_Control( ROBORT_LIGHT_ONE, ROBORT_LIGHT_OFF);
-//		delay_ms(1000);
-//	}
+	while (1)
+	{
+		Robort_Light_Control( ROBORT_LIGHT_ONE, ROBORT_LIGHT_ON);
+		delay_ms(1000);
+		Robort_Light_Control( ROBORT_LIGHT_ONE, ROBORT_LIGHT_OFF);
+		delay_ms(1000);
+	}
 /******************************************************************************************
 						BEEP TEST
 ******************************************************************************************/   
