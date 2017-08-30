@@ -1,4 +1,5 @@
 ..\..\output\main.o: ..\..\APP\main.c
+..\..\output\main.o: ..\..\APP\main.h
 ..\..\output\main.o: ..\..\APP\Common.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\core_cm3.h

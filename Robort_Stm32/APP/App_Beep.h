@@ -17,7 +17,7 @@ typedef enum
 void Robort_Beep_Control(ROBORT_BEEP_TAG beep_status);
 void Robort_Beep_Init(void);
 
-extern void STM32_GPIO_SetPin( GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, u8 val);
+extern void STM32_GPIO_SetPin( uint8_t gpio, uint8_t pin, uint8_t val);
 
 
 #endif

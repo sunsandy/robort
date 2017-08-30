@@ -3,6 +3,8 @@
 
 #include "stm32f10x.h"
 #include "stm32f10x_conf.h"
+
+//User GPIO No.
 typedef enum
 {
 	U_GPIO_A = 0,
@@ -14,6 +16,7 @@ typedef enum
 	U_GPIO_G,
 }GPIO_IDX_TAG;
 
+//User PIN No.
 typedef enum
 {
 	U_PIN_0 = 0,
@@ -34,6 +37,7 @@ typedef enum
 	U_PIN_15,
 }GPIO_PIN_TAG;
 
+//User MODE
 typedef enum
 {
 	U_MODE_AIN=0,
@@ -44,16 +48,18 @@ typedef enum
 	U_MODE_OUT_PP,
 	U_MODE_AF_OD,
 	U_MODE_AF_PP,
-};
-
-
-typedef enum
-{
-	U_PP = 0,
 }GPIO_MODE_TAG;
 
-void STM32_GPIO_SetPin( GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, u8 val);
-void STM32_GPIO_ConfgPin(uint8_t gpio, uint8_t pin, uint8_t mode);
+//User SPEED
+typedef enum
+{
+	U_SPEED_10M = 0,
+	U_SPEED_2M,
+	U_SPEED_50M,
+}GPIO_SPEED_TAG;
+
+void STM32_GPIO_SetPin( uint8_t gpio, uint8_t pin, uint8_t val);
+void STM32_GPIO_ConfgPin(uint8_t gpio, uint8_t pin, uint8_t mode, uint8_t speed);
 
 
 #endif

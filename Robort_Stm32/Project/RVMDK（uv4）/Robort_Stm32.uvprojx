@@ -673,6 +673,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\APP\App_GPS.c</FilePath>
             </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\APP\main.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
