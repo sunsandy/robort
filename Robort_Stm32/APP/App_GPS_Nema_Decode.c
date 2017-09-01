@@ -1,49 +1,49 @@
-
+ï»¿
 #include "stm32f10x.h"
 #include "BSP_Uart.h"	
 #include "nmea/nmea.h"
 #include "BSP_GPS.h"
 
-nmeaINFO info;          //GPS½âÂëºóµÃµ½µÄĞÅÏ¢
-nmeaPARSER parser;      //½âÂëÊ±Ê¹ÓÃµÄÊı¾İ½á¹¹ 
+nmeaINFO info;          //GPSè§£ç åå¾—åˆ°çš„ä¿¡æ¯
+nmeaPARSER parser;      //è§£ç æ—¶ä½¿ç”¨çš„æ•°æ®ç»“æ„ 
 nmeaINFO GPS_Info;
 
 /**
-  * @brief  nmea_decode_test ½âÂëGPSÄ£¿éĞÅÏ¢
-  * @param  ÎŞ
-  * @retval ÎŞ
+  * @brief  nmea_decode_test è§£ç GPSæ¨¡å—ä¿¡æ¯
+  * @param  æ— 
+  * @retval æ— 
   */
 int nmea_decode_test(void)
 {
 
-    nmeaINFO info;          //GPS½âÂëºóµÃµ½µÄĞÅÏ¢
-    nmeaPARSER parser;      //½âÂëÊ±Ê¹ÓÃµÄÊı¾İ½á¹¹  
-    uint8_t new_parse=0;    //ÊÇ·ñÓĞĞÂµÄ½âÂëÊı¾İ±êÖ¾
+    nmeaINFO info;          //GPSè§£ç åå¾—åˆ°çš„ä¿¡æ¯
+    nmeaPARSER parser;      //è§£ç æ—¶ä½¿ç”¨çš„æ•°æ®ç»“æ„  
+    uint8_t new_parse=0;    //æ˜¯å¦æœ‰æ–°çš„è§£ç æ•°æ®æ ‡å¿—
 		uint32_t lat;
   
-    nmeaTIME beiJingTime;    //±±¾©Ê±¼ä 
+    nmeaTIME beiJingTime;    //åŒ—äº¬æ—¶é—´ 
 
-    /* ÉèÖÃÓÃÓÚÊä³öµ÷ÊÔĞÅÏ¢µÄº¯Êı */
+    /* è®¾ç½®ç”¨äºè¾“å‡ºè°ƒè¯•ä¿¡æ¯çš„å‡½æ•° */
     nmea_property()->trace_func = &trace;
     nmea_property()->error_func = &error;
 
-    /* ³õÊ¼»¯GPSÊı¾İ½á¹¹ */
+    /* åˆå§‹åŒ–GPSæ•°æ®ç»“æ„ */
     nmea_zero_INFO(&info);
     nmea_parser_init(&parser);
    
     while(1)
     {
-      if(GPS_HalfTransferEnd)     /* ½ÓÊÕµ½GPS_RBUFF_SIZEÒ»°ëµÄÊı¾İ */
+      if(GPS_HalfTransferEnd)     /* æ¥æ”¶åˆ°GPS_RBUFF_SIZEä¸€åŠçš„æ•°æ® */
       {
-//        /* ½øĞĞnmea¸ñÊ½½âÂë */
+//        /* è¿›è¡Œnmeaæ ¼å¼è§£ç  */
         nmea_parse(&parser, (const char*)&gps_rbuff[0], HALF_GPS_RBUFF_SIZE, &info);
 				 STM32_UART1_Write((u8*)&(info.satinfo.inuse),1);
 //        
-        GPS_HalfTransferEnd = 0;   //Çå¿Õ±êÖ¾Î»
-        new_parse = 1;             //ÉèÖÃ½âÂëÏûÏ¢±êÖ¾ 
+        GPS_HalfTransferEnd = 0;   //æ¸…ç©ºæ ‡å¿—ä½
+        new_parse = 1;             //è®¾ç½®è§£ç æ¶ˆæ¯æ ‡å¿— 
 				
       }
-      else if(GPS_TransferEnd)    /* ½ÓÊÕµ½ÁíÒ»°ëÊı¾İ */
+      else if(GPS_TransferEnd)    /* æ¥æ”¶åˆ°å¦ä¸€åŠæ•°æ® */
       {
 
         nmea_parse(&parser, (const char*)&gps_rbuff[HALF_GPS_RBUFF_SIZE], HALF_GPS_RBUFF_SIZE, &info);
@@ -53,27 +53,27 @@ int nmea_decode_test(void)
 				
       }
       
-      if(new_parse )                //ÓĞĞÂµÄ½âÂëÏûÏ¢   
+      if(new_parse )                //æœ‰æ–°çš„è§£ç æ¶ˆæ¯   
       { 
 				
-        /* ¶Ô½âÂëºóµÄÊ±¼ä½øĞĞ×ª»»£¬×ª»»³É±±¾©Ê±¼ä */
+        /* å¯¹è§£ç åçš„æ—¶é—´è¿›è¡Œè½¬æ¢ï¼Œè½¬æ¢æˆåŒ—äº¬æ—¶é—´ */
 //        GMTconvert(&info.utc,&beiJingTime,8,1);
 				
         lat=info.lat*1000000;
-				printf("\r\nÎ³¶È£º%d\r\n",lat);
-        printf("\r\nÊ±¼ä%d,%d,%d,%d,%d,%d\r\n", beiJingTime.year+1900, beiJingTime.mon+1,beiJingTime.day,beiJingTime.hour,beiJingTime.min,beiJingTime.sec);
-        printf("\r\nÎ³¶È£º%f,¾­¶È%f\r\n",info.lat,info.lon);
-        printf("\r\nÕıÔÚÊ¹ÓÃµÄÎÀĞÇ£º%d,¿É¼ûÎÀĞÇ£º%d",info.satinfo.inuse,info.satinfo.inview);
-        printf("\r\nº£°Î¸ß¶È£º%f Ã× ", info.elv);
-        printf("\r\nËÙ¶È£º%f km/h ", info.speed);
-        printf("\r\nº½Ïò£º%f ¶È", info.direction);
+				printf("\r\nçº¬åº¦ï¼š%d\r\n",lat);
+        printf("\r\næ—¶é—´%d,%d,%d,%d,%d,%d\r\n", beiJingTime.year+1900, beiJingTime.mon+1,beiJingTime.day,beiJingTime.hour,beiJingTime.min,beiJingTime.sec);
+        printf("\r\nçº¬åº¦ï¼š%f,ç»åº¦%f\r\n",info.lat,info.lon);
+        printf("\r\næ­£åœ¨ä½¿ç”¨çš„å«æ˜Ÿï¼š%d,å¯è§å«æ˜Ÿï¼š%d",info.satinfo.inuse,info.satinfo.inview);
+        printf("\r\næµ·æ‹”é«˜åº¦ï¼š%f ç±³ ", info.elv);
+        printf("\r\né€Ÿåº¦ï¼š%f km/h ", info.speed);
+        printf("\r\nèˆªå‘ï¼š%f åº¦", info.direction);
        STM32_UART1_Write((u8*)&(info.satinfo.inuse),1);
         new_parse = 0;
       }
 	
 	}
 
-    /* ÊÍ·ÅGPSÊı¾İ½á¹¹ */
+    /* é‡Šæ”¾GPSæ•°æ®ç»“æ„ */
     // nmea_parser_destroy(&parser);
 
     

@@ -11,7 +11,7 @@ static uint8 gFlagSpeedRset = 0;
 static void Set_Motor_Direction(MOTOR_TAG motorNo, DIRECTION_TAG  dir)
 {
     static MOTOR_TAG preMotorNo = MOTOR_NONE;
-    static DIRECTION_TAG preDir = MOTOR_NONE;
+    static DIRECTION_TAG preDir = DIR_STOPPED;
     
     if (preMotorNo==motorNo && preDir==dir)
     {
@@ -27,11 +27,11 @@ static void Set_Motor_Direction(MOTOR_TAG motorNo, DIRECTION_TAG  dir)
      {
         if (dir == DIR_POSITIVE)
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_9, 1);   // DIR1=HIGH
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_9, 1);   // DIR1=HIGH
         }
         else
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_9, 0);  // DIR1=LOW
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_9, 0);  // DIR1=LOW
         }
      }
      break;
@@ -39,31 +39,31 @@ static void Set_Motor_Direction(MOTOR_TAG motorNo, DIRECTION_TAG  dir)
      case MOTOR_RT:
         if (dir == DIR_POSITIVE)
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_8, 1);   // DIR2=HIGH
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_8, 1);   // DIR2=HIGH
         }
         else
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_8, 0);    // DIR2=LOW
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_8, 0);    // DIR2=LOW
         }
      break;
      case MOTOR_LB:
         if (dir == DIR_POSITIVE)
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_7, 1);   // DIR3=HIGH
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_7, 1);   // DIR3=HIGH
         }
         else
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_7, 0);    // DIR3=LOW
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_7, 0);    // DIR3=LOW
         }
      break;
      case MOTOR_RB:
         if (dir == DIR_POSITIVE)
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_6, 1);   // DIR4=HIGH
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_6, 1);   // DIR4=HIGH
         }
         else
         {
-             STM32_GPIO_SetPin(GPIOC, GPIO_Pin_6, 0);   // DIR4=LOW
+             STM32_GPIO_SetPin(U_GPIO_C, U_PIN_6, 0);   // DIR4=LOW
         }
      break;  
 
@@ -219,7 +219,7 @@ void Robort_Direction_Control(ROBORT_DIRECTION_TAG dir, uint8 speed)
 //if set speed, then robort move by the new speed next time
 void  Robort_Speed_Control(ROBORT_SPEED_TAG robort_dir, unsigned char robort_speed)
 {
-    gFlagSpeedRset = 1;   //±êÖ¾Îª1£¬´ú±í¿Í»§¶ËÉè¶¨ÁËËÙ¶È
+    gFlagSpeedRset = 1;   //æ ‡å¿—ä¸º1ï¼Œä»£è¡¨å®¢æˆ·ç«¯è®¾å®šäº†é€Ÿåº¦
     
     switch (robort_dir)
     {
@@ -255,10 +255,10 @@ void Robort_Motor_Init(void)
    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
    GPIO_Init(GPIOC, &GPIO_InitStructure);  
     
-   STM32_GPIO_SetPin(GPIOC, GPIO_Pin_6, 1);
-   STM32_GPIO_SetPin(GPIOC, GPIO_Pin_7, 1);
-   STM32_GPIO_SetPin(GPIOC, GPIO_Pin_8, 1);
-   STM32_GPIO_SetPin(GPIOC, GPIO_Pin_9, 1);
+   STM32_GPIO_SetPin(U_GPIO_C, U_PIN_6, 1);
+   STM32_GPIO_SetPin(U_GPIO_C, U_PIN_7, 1);
+   STM32_GPIO_SetPin(U_GPIO_C, U_PIN_8, 1);
+   STM32_GPIO_SetPin(U_GPIO_C, U_PIN_9, 1);
      
    TIM2_PWM_Init(MOTOR_PERIOD_DEFAULT,71);
    STM32_TIMER2_PWMControl(TIM2_PWM1, MOTOR_PERIOD_DEFAULT, 0); // PWM out low 

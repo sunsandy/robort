@@ -1,4 +1,4 @@
-#include "App_Steer.h"
+ï»¿#include "App_Steer.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //                            Next is  cloud stage's controller
@@ -7,7 +7,7 @@
 
 
 
-//¸ù¾İ½Ç¶ÈÖµ¼ÆËãÊä³öÕ¼¿Õ±È
+//æ ¹æ®è§’åº¦å€¼è®¡ç®—è¾“å‡ºå ç©ºæ¯”
 static unsigned char calDutyCycle(short turnAngle)
 {
 	uint8 out_dutycycle = 0;
@@ -19,97 +19,97 @@ static unsigned char calDutyCycle(short turnAngle)
 
 
 
-//1ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//1å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerOneControl(short turnAngle)
 {
 	uint8 dutyCycle= 0;
 	
-	dutyCycle = calDutyCycle(turnAngle); //¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle = calDutyCycle(turnAngle); //è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM3_PWM1, CLOUD_STAGE_STEER_PERIOD, dutyCycle); //20ms/1.5ms 
 }
 
 
-//2ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//2å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerTwoControl(short turnAngle)
 {
 	unsigned char dutyCycle = 0;
 
-	dutyCycle= calDutyCycle(turnAngle); //;//¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle= calDutyCycle(turnAngle); //;//è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM3_PWM2, CLOUD_STAGE_STEER_PERIOD, dutyCycle); 
 }
 
-//3ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//3å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerThreeControl(short turnAngle)
 {
 	unsigned char dutyCycle = 0;
 
-	dutyCycle= calDutyCycle(turnAngle); //;//¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle= calDutyCycle(turnAngle); //;//è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM3_PWM3, CLOUD_STAGE_STEER_PERIOD, dutyCycle); 
 }
-//4ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//4å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerFourControl(short turnAngle)
 {
 	unsigned char dutyCycle = 0;
 
-	dutyCycle= calDutyCycle(turnAngle); //;//¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle= calDutyCycle(turnAngle); //;//è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM3_PWM4, CLOUD_STAGE_STEER_PERIOD, dutyCycle); 
 }
-//5ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//5å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerFiveControl(short turnAngle)
 {
 	unsigned char dutyCycle = 0;
 
-	dutyCycle= calDutyCycle(turnAngle); //;//¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle= calDutyCycle(turnAngle); //;//è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM4_PWM1, CLOUD_STAGE_STEER_PERIOD, dutyCycle); 
 }
-//6ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//6å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerSixControl(short turnAngle)
 {
 	unsigned char dutyCycle = 0;
 
-	dutyCycle= calDutyCycle(turnAngle); //;//¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle= calDutyCycle(turnAngle); //;//è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM4_PWM2, CLOUD_STAGE_STEER_PERIOD, dutyCycle); 
 }
-//7ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//7å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerSevenControl(short turnAngle)
 {
 	unsigned char dutyCycle = 0;
 
-	dutyCycle= calDutyCycle(turnAngle); //;//¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle= calDutyCycle(turnAngle); //;//è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM4_PWM3, CLOUD_STAGE_STEER_PERIOD, dutyCycle); 
 }
-//8ºÅ¶æ»ú½Ç¶È¿ØÖÆ
+//8å·èˆµæœºè§’åº¦æ§åˆ¶
 static void  SteerEightControl(short turnAngle)
 {
 	unsigned char dutyCycle = 0;
 
-	dutyCycle= calDutyCycle(turnAngle); //;//¼ÆËã×ª¶¯ºó¶ÔÓ¦µÄÂö³åcnt	
+	dutyCycle= calDutyCycle(turnAngle); //;//è®¡ç®—è½¬åŠ¨åå¯¹åº”çš„è„‰å†²cnt	
 
 	STM32_TIMER3_PWMControl(TIM4_PWM4, CLOUD_STAGE_STEER_PERIOD, dutyCycle); 
 }
 
 /*************************************************************************************************
 *****
-***** º¯ÊıÃû£ºvoid  Robort_Steer_Controller()
+***** å‡½æ•°åï¼švoid  Robort_Steer_Controller()
 *****
-***** Èë¿Ú²ÎÊı£ºsteerNum  --- ROBORT_STEER1 or ROBORT_STEER2
+***** å…¥å£å‚æ•°ï¼šsteerNum  --- ROBORT_STEER1 or ROBORT_STEER2
 *****			turnAngle --- 0-180
 *****
-***** ¹¦ÄÜÃèÊö£º¶æ»úµÄ½Ç¶È¿ØÖÆ
+***** åŠŸèƒ½æè¿°ï¼šèˆµæœºçš„è§’åº¦æ§åˆ¶
 ***** 
 *****							
-***** µ÷ÓÃ£º ÎŞ		   
+***** è°ƒç”¨ï¼š æ— 		   
 *****
-***** ·µ»ØÖµ£ºÎŞ
+***** è¿”å›å€¼ï¼šæ— 
 *****
-***** ×÷Õß£ºSandy
+***** ä½œè€…ï¼šSandy
 ****				
 ****
 **************************************************************************************************/
@@ -123,35 +123,35 @@ char Robort_Steer_Control(ROBORT_STEER_TAG steerNo,  short turnAngle)
 
 	if (steerNo == ROBORT_STEER1)
 	{
-		SteerOneControl(turnAngle); //1ºÅ¶æ»ú¿ØÖÆ
+		SteerOneControl(turnAngle); //1å·èˆµæœºæ§åˆ¶
 	}
 	else if( steerNo== ROBORT_STEER2)
 	{
-		SteerTwoControl(turnAngle); //2ºÅ¶æ»ú¿ØÖÆ
+		SteerTwoControl(turnAngle); //2å·èˆµæœºæ§åˆ¶
 	}
 	else if( steerNo== ROBORT_STEER3)
 	{
-		SteerThreeControl(turnAngle); //3ºÅ¶æ»ú¿ØÖÆ
+		SteerThreeControl(turnAngle); //3å·èˆµæœºæ§åˆ¶
 	}
 	else if( steerNo== ROBORT_STEER4)
 	{
-		SteerFourControl(turnAngle); //4ºÅ¶æ»ú¿ØÖÆ
+		SteerFourControl(turnAngle); //4å·èˆµæœºæ§åˆ¶
 	}
 	else if( steerNo== ROBORT_STEER5)
 	{
-		SteerFiveControl(turnAngle); //5ºÅ¶æ»ú¿ØÖÆ
+		SteerFiveControl(turnAngle); //5å·èˆµæœºæ§åˆ¶
 	}
 	else if( steerNo== ROBORT_STEER6)
 	{
-		SteerSixControl(turnAngle); //6ºÅ¶æ»ú¿ØÖÆ
+		SteerSixControl(turnAngle); //6å·èˆµæœºæ§åˆ¶
 	}
 	else if( steerNo== ROBORT_STEER7)
 	{
-		SteerSevenControl(turnAngle); //7ºÅ¶æ»ú¿ØÖÆ
+		SteerSevenControl(turnAngle); //7å·èˆµæœºæ§åˆ¶
 	}
 	else if( steerNo== ROBORT_STEER8)
 	{
-		SteerEightControl(turnAngle); //8ºÅ¶æ»ú¿ØÖÆ
+		SteerEightControl(turnAngle); //8å·èˆµæœºæ§åˆ¶
 	}
 	
 

@@ -1,4 +1,4 @@
-#ifndef _APP_MAIN_H
+ï»¿#ifndef _APP_MAIN_H
 #define _APP_MAIN_H
 
 #include "Common.h" 
@@ -20,7 +20,7 @@
 #define _ENABLE_MODULE_4  1
 
 
-//ModuleĞòºÅ
+//Moduleåºå·
 typedef enum Module_Tag
 {
 	MODULE_LIGHT = 0,
@@ -31,13 +31,13 @@ typedef enum Module_Tag
 	MODULE_END
 }ROBORT_MODULE_TAG;
 
-//Module²âÊÔº¯Êı
+//Moduleæµ‹è¯•å‡½æ•°
 static void Robort_Light_Test(void);
 static void Robort_Beep_Test(void);
 static void Robort_Motor_Test(void);
 static void Robort_Steer_Test(void);
 
-//Module²âÊÔº¯ÊıµØÖ·ÁĞ±í
+//Moduleæµ‹è¯•å‡½æ•°åœ°å€åˆ—è¡¨
 typedef void (* P_DEBUG_FUNC)(void);
 static P_DEBUG_FUNC Robort_Debug_Func[MODULE_END] = 
 {

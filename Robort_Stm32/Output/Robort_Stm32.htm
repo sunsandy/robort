@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\..\Output\Robort_Stm32.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\Robort_Stm32.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Aug 28 22:11:44 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri Sep 01 21:45:15 2017
 <BR><P>
 <H3>Maximum Stack Usage =        116 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -56,6 +56,10 @@ Function Pointers
  <LI><a href="#[33]">RTCAlarm_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[d]">RTC_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[0]">Reset_Handler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
+ <LI><a href="#[4b]">Robort_Beep_Test</a> from main.o(i.Robort_Beep_Test) referenced from main.o(.data)
+ <LI><a href="#[4a]">Robort_Light_Test</a> from main.o(i.Robort_Light_Test) referenced from main.o(.data)
+ <LI><a href="#[4c]">Robort_Motor_Test</a> from main.o(i.Robort_Motor_Test) referenced from main.o(.data)
+ <LI><a href="#[4d]">Robort_Steer_Test</a> from main.o(i.Robort_Steer_Test) referenced from main.o(.data)
  <LI><a href="#[3b]">SDIO_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[2d]">SPI1_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[2e]">SPI2_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
@@ -101,12 +105,12 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[b2]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
-<P><STRONG><a name="[4a]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[4e]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[5b]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[5f]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
 <P><STRONG><a name="[b3]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
@@ -294,56 +298,56 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[4d]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<P><STRONG><a name="[51]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
 <P><STRONG><a name="[b8]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[b9]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[4c]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[50]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[6d]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hardware_Test
+<P><STRONG><a name="[6f]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hardware_Test
 </UL>
 
 <P><STRONG><a name="[ba]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[4e]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[52]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[4f]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[53]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[54]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[58]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[55]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[59]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[56]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<P><STRONG><a name="[5a]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[57]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<P><STRONG><a name="[5b]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
@@ -358,65 +362,65 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[58]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[5c]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[50]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<P><STRONG><a name="[54]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
 <P><STRONG><a name="[bc]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
-<P><STRONG><a name="[59]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<P><STRONG><a name="[5d]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
 <P><STRONG><a name="[bd]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[51]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[55]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
 <P><STRONG><a name="[be]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
 <P><STRONG><a name="[bf]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
 
-<P><STRONG><a name="[53]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<P><STRONG><a name="[57]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
-<P><STRONG><a name="[52]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[56]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[5a]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[5e]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[4b]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<P><STRONG><a name="[4f]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
 <P><STRONG><a name="[c0]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
@@ -427,60 +431,60 @@ Global Symbols
 <P><STRONG><a name="[17]"></a>DMA1_Channel3_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, stm32f10x_it.o(i.DMA1_Channel3_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DMA1_Channel3_IRQHandler &rArr; GPS_ProcessDMAIRQ
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_ProcessDMAIRQ
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_ProcessDMAIRQ
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
 <P><STRONG><a name="[18]"></a>DMA1_Channel4_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, stm32f10x_it.o(i.DMA1_Channel4_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DMA1_Channel4_IRQHandler &rArr; Upload_ProcessDMAIRQ
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
 <P><STRONG><a name="[a6]"></a>DMA1_DATA_Trans_Task_OFF</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, bsp_uart.o(i.DMA1_DATA_Trans_Task_OFF))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
 </UL>
 
-<P><STRONG><a name="[6a]"></a>DMA_ClearFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ClearFlag))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_ProcessDMAIRQ
+<P><STRONG><a name="[6c]"></a>DMA_ClearFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ClearFlag))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_ProcessDMAIRQ
 </UL>
 
-<P><STRONG><a name="[67]"></a>DMA_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<P><STRONG><a name="[69]"></a>DMA_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 </UL>
 
-<P><STRONG><a name="[62]"></a>DMA_DeInit</STRONG> (Thumb, 324 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_DeInit))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<P><STRONG><a name="[64]"></a>DMA_DeInit</STRONG> (Thumb, 324 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_DeInit))
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 </UL>
 
-<P><STRONG><a name="[69]"></a>DMA_GetITStatus</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_GetITStatus))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_ProcessDMAIRQ
+<P><STRONG><a name="[6b]"></a>DMA_GetITStatus</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_GetITStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Upload_ProcessDMAIRQ
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_ProcessDMAIRQ
 </UL>
 
-<P><STRONG><a name="[66]"></a>DMA_ITConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ITConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<P><STRONG><a name="[68]"></a>DMA_ITConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ITConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 </UL>
 
-<P><STRONG><a name="[63]"></a>DMA_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_dma.o(i.DMA_Init))
+<P><STRONG><a name="[65]"></a>DMA_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_dma.o(i.DMA_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DMA_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 </UL>
 
-<P><STRONG><a name="[60]"></a>DMA_Uart1_Init</STRONG> (Thumb, 140 bytes, Stack size 56 bytes, bsp_uart.o(i.DMA_Uart1_Init))
+<P><STRONG><a name="[62]"></a>DMA_Uart1_Init</STRONG> (Thumb, 140 bytes, Stack size 56 bytes, bsp_uart.o(i.DMA_Uart1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = DMA_Uart1_Init &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Init
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ITConfig
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_DeInit
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Cmd
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DMACmd
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Init
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ITConfig
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_DeInit
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Cmd
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DMACmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
 </UL>
@@ -503,18 +507,18 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[82]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ResetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
 </UL>
 
 <P><STRONG><a name="[81]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
 </UL>
 
-<P><STRONG><a name="[5e]"></a>GPS_ProcessDMAIRQ</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, bsp_gps.o(i.GPS_ProcessDMAIRQ))
+<P><STRONG><a name="[60]"></a>GPS_ProcessDMAIRQ</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, bsp_gps.o(i.GPS_ProcessDMAIRQ))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPS_ProcessDMAIRQ
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetITStatus
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearFlag
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetITStatus
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearFlag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel3_IRQHandler
 </UL>
@@ -522,7 +526,7 @@ Global Symbols
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_it.o(i.HardFault_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HardFault_Handler &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
@@ -535,29 +539,29 @@ Global Symbols
 <P><STRONG><a name="[70]"></a>NVIC_Configuration</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, bsp_timer.o(i.NVIC_Configuration))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NVIC_Configuration
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Init
 </UL>
 
-<P><STRONG><a name="[65]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
+<P><STRONG><a name="[67]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_Init
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_Int_Init
 </UL>
 
-<P><STRONG><a name="[64]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<P><STRONG><a name="[66]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
 </UL>
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[61]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<P><STRONG><a name="[63]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 </UL>
 
 <P><STRONG><a name="[8e]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd))
@@ -595,30 +599,21 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
-<P><STRONG><a name="[71]"></a>Robort_Beep_Init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, app_beep.o(i.Robort_Beep_Init))
+<P><STRONG><a name="[71]"></a>Robort_Beep_Init</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, app_beep.o(i.Robort_Beep_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Robort_Beep_Init &rArr; STM32_GPIO_ConfgPin &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_ConfgPin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6e]"></a>Robort_Light_Control</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, app_light.o(i.Robort_Light_Control))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Robort_Light_Control &rArr; Control_1stLight &rArr; STM32_GPIO_SetPin
-</UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_2ndLight
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_1stLight
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hardware_Test
-</UL>
-
-<P><STRONG><a name="[74]"></a>Robort_Light_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, app_light.o(i.Robort_Light_Init))
+<P><STRONG><a name="[74]"></a>Robort_Light_Init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, app_light.o(i.Robort_Light_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Robort_Light_Init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -630,7 +625,7 @@ Global Symbols
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_PWM_Init
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_TIMER2_PWMControl
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -663,14 +658,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Beep_Init
 </UL>
 
-<P><STRONG><a name="[5d]"></a>STM32_GPIO_SetPin</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, bsp_gpio.o(i.STM32_GPIO_SetPin))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = STM32_GPIO_SetPin
+<P><STRONG><a name="[73]"></a>STM32_GPIO_SetPin</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, bsp_gpio.o(i.STM32_GPIO_SetPin))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = STM32_GPIO_SetPin
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_1stLight
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Motor_Init
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Motor_Init
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Light_Init
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Beep_Init
 </UL>
@@ -731,7 +725,7 @@ Global Symbols
 <P><STRONG><a name="[8a]"></a>TIM1_Int_Init</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, bsp_timer.o(i.TIM1_Int_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = TIM1_Int_Init &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITConfig
@@ -966,7 +960,7 @@ Global Symbols
 <P><STRONG><a name="[9a]"></a>UART1_Init</STRONG> (Thumb, 158 bytes, Stack size 32 bytes, bsp_uart.o(i.UART1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = UART1_Init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
@@ -1007,7 +1001,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART3_Init
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_Init
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_Init
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Uart_Init
 </UL>
@@ -1026,8 +1020,8 @@ Global Symbols
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_Init
 </UL>
 
-<P><STRONG><a name="[68]"></a>USART_DMACmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_DMACmd))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
+<P><STRONG><a name="[6a]"></a>USART_DMACmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_DMACmd))
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Uart1_Init
 </UL>
 
 <P><STRONG><a name="[9b]"></a>USART_DeInit</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, stm32f10x_usart.o(i.USART_DeInit))
@@ -1073,11 +1067,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[5f]"></a>Upload_ProcessDMAIRQ</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, bsp_uart.o(i.Upload_ProcessDMAIRQ))
+<P><STRONG><a name="[61]"></a>Upload_ProcessDMAIRQ</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, bsp_uart.o(i.Upload_ProcessDMAIRQ))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Upload_ProcessDMAIRQ
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetITStatus
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearFlag
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetITStatus
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearFlag
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_DATA_Trans_Task_OFF
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel4_IRQHandler
@@ -1092,7 +1086,7 @@ Global Symbols
 
 <P><STRONG><a name="[c1]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[6b]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
+<P><STRONG><a name="[6d]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
@@ -1116,10 +1110,6 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6f]"></a>delay_ms</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, bsp_systick.o(i.delay_ms))
-<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hardware_Test
-</UL>
-
 <P><STRONG><a name="[49]"></a>fputc</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, bsp_uart.o(i.fputc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fputc
 </UL>
@@ -1128,7 +1118,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = main &rArr; Robort_Uart_Init &rArr; UART_Init &rArr; UART3_Init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
@@ -1138,7 +1128,7 @@ Global Symbols
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Motor_Init
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Light_Init
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Beep_Init
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hardware_Test
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hardware_Test
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL><P>
@@ -1159,35 +1149,33 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 
-<P><STRONG><a name="[6c]"></a>Hardware_Test</STRONG> (Thumb, 54 bytes, Stack size 40 bytes, main.o(i.Hardware_Test))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Hardware_Test &rArr; Robort_Light_Control &rArr; Control_1stLight &rArr; STM32_GPIO_SetPin
+<P><STRONG><a name="[6e]"></a>Hardware_Test</STRONG> (Thumb, 48 bytes, Stack size 48 bytes, main.o(i.Hardware_Test))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Hardware_Test
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Light_Control
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5c]"></a>Control_1stLight</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, app_light.o(i.Control_1stLight))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Control_1stLight &rArr; STM32_GPIO_SetPin
+<P><STRONG><a name="[4b]"></a>Robort_Beep_Test</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i.Robort_Beep_Test))
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32_GPIO_SetPin
+<P><STRONG><a name="[4a]"></a>Robort_Light_Test</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i.Robort_Light_Test))
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Light_Control
+<P><STRONG><a name="[4c]"></a>Robort_Motor_Test</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i.Robort_Motor_Test))
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
-
-<P><STRONG><a name="[73]"></a>Control_2ndLight</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, app_light.o(i.Control_2ndLight))
-<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robort_Light_Control
+<P><STRONG><a name="[4d]"></a>Robort_Steer_Test</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i.Robort_Steer_Test))
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
-
 <P><STRONG><a name="[a9]"></a>_fp_digits</STRONG> (Thumb, 334 bytes, Stack size 56 bytes, printfa.o(i._fp_digits), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
@@ -1196,7 +1184,7 @@ Local Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf
