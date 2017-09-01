@@ -68,7 +68,7 @@ void Robort_Light_Control(ROBORT_LIGHT_NO_TAG light_no, ROBORT_LIGHT_TAG light_s
 static void Control_1stLight(ROBORT_LIGHT_TAG light_status)
 {
     (ROBORT_LIGHT_ON==light_status) ?
-        STM32_GPIO_SetPin(GPIOA, GPIO_Pin_11, 1) : STM32_GPIO_SetPin(GPIOA, GPIO_Pin_11, 0);
+        STM32_GPIO_SetPin(U_GPIO_A, U_PIN_11, 1) : STM32_GPIO_SetPin(U_GPIO_A, U_PIN_11, 0);
 }
 
 static void Control_2ndLight(ROBORT_LIGHT_TAG light_status)
@@ -98,5 +98,5 @@ void Robort_Light_Init(void)
   	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;     //IO口速度为50MHz
   	GPIO_Init(GPIOA, &GPIO_InitStructure);                //推挽输出 ，IO口速度为50MHz
 
-    STM32_GPIO_SetPin(GPIOA, GPIO_Pin_11, 0);             //GPIOA_Pin11设置为低
+    STM32_GPIO_SetPin(U_GPIO_A, U_PIN_11, 0);             //GPIOA_Pin11设置为低
 }

@@ -1,4 +1,4 @@
-﻿#include "main.h"
+#include "main.h"
 
 extern void nmea_decode_test(void);
 static void Hardware_Test(void);
@@ -6,8 +6,8 @@ static void Hardware_Test(void);
 
 App_Robort_Dat_Tag g_ProtocolData = {0};
     
-u8 u[17]="\r\nDMA 测试成功\r\n";
-u8 w[17]="\r\nDMA 中断测试\r\n";
+u8 u[20]="\r\nDMA 测试成功\r\n";
+u8 w[20]="\r\nDMA 中断测试\r\n";
 
 /****************************************************************************************
 // System clock is configured defaultly in /STARTUP/startup_stm32f10x_hd.s line 152,
