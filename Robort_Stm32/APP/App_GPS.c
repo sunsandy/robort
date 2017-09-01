@@ -1,11 +1,11 @@
-#include "APP_GPS.H"
+ï»¿#include "APP_GPS.H"
 #include "BSP_Uart.h"	
 #include "nmea/nmea.h"
 
 struct GPS_Info GPS_Info_Data;
-nmeaINFO info;          //GPS½âÂëºóµÃµ½µÄĞÅÏ¢
-nmeaPARSER parser;      //½âÂëÊ±Ê¹ÓÃµÄÊı¾İ½á¹¹  
-uint8_t new_parse=0;    //ÊÇ·ñÓĞĞÂµÄ½âÂëÊı¾İ±êÖ¾
+nmeaINFO info;          //GPSè§£ç åå¾—åˆ°çš„ä¿¡æ¯
+nmeaPARSER parser;      //è§£ç æ—¶ä½¿ç”¨çš„æ•°æ®ç»“æ„  
+uint8_t new_parse=0;    //æ˜¯å¦æœ‰æ–°çš„è§£ç æ•°æ®æ ‡å¿—
 void GPS_DATA_Init( void)
 {
 	  nmea_zero_INFO(&info);
@@ -35,8 +35,8 @@ static void GPS_HalfTransferEnd_Nema()
 //	u8 temp[4]={};
 //	if (!parser.top_node)	//List have no data entry
 //	{
-		nmea_parse(&parser, (const char*)&gps_rbuff[0], HALF_GPS_RBUFF_SIZE, &info);  /* ½øĞĞnmea¸ñÊ½½âÂë */       
-		GPS_HalfTransferEnd = 0;   //Çå¿Õ±êÖ¾Î»
+		nmea_parse(&parser, (const char*)&gps_rbuff[0], HALF_GPS_RBUFF_SIZE, &info);  /* è¿›è¡Œnmeaæ ¼å¼è§£ç  */       
+		GPS_HalfTransferEnd = 0;   //æ¸…ç©ºæ ‡å¿—ä½
 		GPS_Info_Data.lat.fLat= info.lat*100000;
 		GPS_Info_Data.lon.fLon=info.lon*100000;
 		GPS_Info_Data.direction.fDir=info.direction*100000;
@@ -44,14 +44,14 @@ static void GPS_HalfTransferEnd_Nema()
 		GPS_Info_Data.sAtinfo_iNuse=info.satinfo.inuse;
 		GPS_Info_Data.sAtinfo_iNview=info.satinfo.inview;
 	  
-//			printf("\r\nÎ³¶È£º%f\r\n",info.lat);
-//	    printf("\r\nÎ³¶È£º%d\r\n",GPS_Info_Data.lat.fLat);
-//	    printf("\r\nÎ³¶È:%d %d %d %d\r\n",GPS_Info_Data.lat.uLat[0],GPS_Info_Data.lat.uLat[1],GPS_Info_Data.lat.uLat[2],GPS_Info_Data.lat.uLat[3]);
+//			printf("\r\nçº¬åº¦ï¼š%f\r\n",info.lat);
+//	    printf("\r\nçº¬åº¦ï¼š%d\r\n",GPS_Info_Data.lat.fLat);
+//	    printf("\r\nçº¬åº¦:%d %d %d %d\r\n",GPS_Info_Data.lat.uLat[0],GPS_Info_Data.lat.uLat[1],GPS_Info_Data.lat.uLat[2],GPS_Info_Data.lat.uLat[3]);
 
-//		printf("\r\nÕıÔÚÊ¹ÓÃµÄÎÀĞÇ£º%d,¿É¼ûÎÀĞÇ£º%d",info.satinfo.inuse,info.satinfo.inview);
-////		printf("\r\nº£°Î¸ß¶È£º%f Ã× ", info.elv);
-//		printf("\r\nËÙ¶È£º%f km/h ", info.speed);
-//		printf("\r\nº½Ïò£º%f ¶È", info.direction);
+//		printf("\r\næ­£åœ¨ä½¿ç”¨çš„å«æ˜Ÿï¼š%d,å¯è§å«æ˜Ÿï¼š%d",info.satinfo.inuse,info.satinfo.inview);
+////		printf("\r\næµ·æ‹”é«˜åº¦ï¼š%f ç±³ ", info.elv);
+//		printf("\r\né€Ÿåº¦ï¼š%f km/h ", info.speed);
+//		printf("\r\nèˆªå‘ï¼š%f åº¦", info.direction);
 //	}
 //	else
 //	{
@@ -74,10 +74,10 @@ static void GPS_TransferEnd_Nema()
 		GPS_Info_Data.sAtinfo_iNuse=info.satinfo.inuse;
 		GPS_Info_Data.sAtinfo_iNview=info.satinfo.inview;
 	
-//    printf("\r\nÎ³¶È£º%f,¾­¶È%f\r\n",info.lat,info.lon);
-//    printf("\r\nÕıÔÚÊ¹ÓÃµÄÎÀĞÇ£º%d,¿É¼ûÎÀĞÇ£º%d",info.satinfo.inuse,info.satinfo.inview);
-//    printf("\r\nËÙ¶È£º%f km/h ", info.speed);
-//    printf("\r\nº½Ïò£º%f ¶È", info.direction);
+//    printf("\r\nçº¬åº¦ï¼š%f,ç»åº¦%f\r\n",info.lat,info.lon);
+//    printf("\r\næ­£åœ¨ä½¿ç”¨çš„å«æ˜Ÿï¼š%d,å¯è§å«æ˜Ÿï¼š%d",info.satinfo.inuse,info.satinfo.inview);
+//    printf("\r\né€Ÿåº¦ï¼š%f km/h ", info.speed);
+//    printf("\r\nèˆªå‘ï¼š%f åº¦", info.direction);
 //	}
 //	else
 //	{
@@ -88,12 +88,12 @@ static void GPS_TransferEnd_Nema()
 }
 void Robort_Get_Nema(void)
 {
-    if(STM32_GET_GPS_HalfTransferEnd_FLAG())     /* ½ÓÊÕµ½GPS_RBUFF_SIZEÒ»°ëµÄÊı¾İ */
+    if(STM32_GET_GPS_HalfTransferEnd_FLAG())     /* æ¥æ”¶åˆ°GPS_RBUFF_SIZEä¸€åŠçš„æ•°æ® */
     {     
         GPS_HalfTransferEnd_Nema();
 				
       }
-     else if(STM32_GET_GPS_TransferEnd_FLAG())    /* ½ÓÊÕµ½ÁíÒ»°ëÊı¾İ */
+     else if(STM32_GET_GPS_TransferEnd_FLAG())    /* æ¥æ”¶åˆ°å¦ä¸€åŠæ•°æ® */
      {
 
         GPS_TransferEnd_Nema();

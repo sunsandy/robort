@@ -1,4 +1,4 @@
-#include "App_Motor.h"
+ï»¿#include "App_Motor.h"
 
 static uint8 gRobortSpeed_L = 0;
 static uint8 gRobortSpeed_R = 0;
@@ -219,7 +219,7 @@ void Robort_Direction_Control(ROBORT_DIRECTION_TAG dir, uint8 speed)
 //if set speed, then robort move by the new speed next time
 void  Robort_Speed_Control(ROBORT_SPEED_TAG robort_dir, unsigned char robort_speed)
 {
-    gFlagSpeedRset = 1;   //±êÖ¾Îª1£¬´ú±í¿Í»§¶ËÉè¶¨ÁËËÙ¶È
+    gFlagSpeedRset = 1;   //æ ‡å¿—ä¸º1ï¼Œä»£è¡¨å®¢æˆ·ç«¯è®¾å®šäº†é€Ÿåº¦
     
     switch (robort_dir)
     {

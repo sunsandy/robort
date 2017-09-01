@@ -1,4 +1,4 @@
-#include "App_Message.h"
+ï»¿#include "App_Message.h"
 #include "APP_GPS.H"
 u8 Message_uPload_Buff[50]={0};
 
@@ -36,45 +36,45 @@ void Robort_Send_Frame(App_Robort_Dat_Tag *pdata)
 }
 
 /*************************************************************************************
-*º¯ÊıÃû£ºGPS_Message_Upload
-*º¯Êı¹¦ÄÜ:ÉÏ´«GPSÊı¾İ¸øÂ·ÓÉÆ÷
-*Ê±¼ä£º2016-10-15
+*å‡½æ•°åï¼šGPS_Message_Upload
+*å‡½æ•°åŠŸèƒ½:ä¸Šä¼ GPSæ•°æ®ç»™è·¯ç”±å™¨
+*æ—¶é—´ï¼š2016-10-15
 *************************************************************************************/
 void GPS_Message_Upload( void)
 {
   int Crc;
-//	while( DMA1_Uart1_Status_Get())			                //²éÑ¯DMA_UARTÊÇ·ñ¿ÕÏĞ
+//	while( DMA1_Uart1_Status_Get())			                //æŸ¥è¯¢DMA_UARTæ˜¯å¦ç©ºé—²
 //	{
 //		;
 //	}
 	
-	Message_uPload_Buff[0]=0xff;                        //×é×°Êı¾İ°üÖ¡Í·
+	Message_uPload_Buff[0]=0xff;                        //ç»„è£…æ•°æ®åŒ…å¸§å¤´
 	Message_uPload_Buff[1]=0x02;
 	Message_uPload_Buff[2]=18;
 	Message_uPload_Buff[3]=0;
 	Message_uPload_Buff[4]=0x10;
 				
-	for( u8 i=0;i<5;i++)                                 //×°Èë¾­¶ÈĞÅÏ¢
+	for( u8 i=0;i<5;i++)                                 //è£…å…¥ç»åº¦ä¿¡æ¯
 	{
 		Message_uPload_Buff[i+5]=GPS_Info_Data.lat.uLat[i];
 	}
 				
-	for( u8 i=0;i<4;i++)                                 //×°ÈëÎ³¶ÈĞÅÏ¢
+	for( u8 i=0;i<4;i++)                                 //è£…å…¥çº¬åº¦ä¿¡æ¯
 	{
 		Message_uPload_Buff[i+9]=GPS_Info_Data.lon.uLon[i];
 	}
 				
-	for( u8 i=0;i<4;i++)                                  //×°Èëº½ÏòĞÅÏ¢
+	for( u8 i=0;i<4;i++)                                  //è£…å…¥èˆªå‘ä¿¡æ¯
 	{
 		Message_uPload_Buff[i+13]=GPS_Info_Data.direction.uDir[i];
 	}				
 				
-	for( u8 i=0;i<4;i++)                                  //×°ÈëËÙ¶ÈĞÅÏ¢
+	for( u8 i=0;i<4;i++)                                  //è£…å…¥é€Ÿåº¦ä¿¡æ¯
 	{
 		Message_uPload_Buff[i+17]=GPS_Info_Data.speed.uSpeed[i];
 	}	 
-	Message_uPload_Buff[21]=GPS_Info_Data.sAtinfo_iNuse;   //ÔÚÓÃÎÀĞÇÊıÄ¿
-	Message_uPload_Buff[22]=GPS_Info_Data.sAtinfo_iNview;  //¿É¼ûÎÀĞÇÊıÄ¿
+	Message_uPload_Buff[21]=GPS_Info_Data.sAtinfo_iNuse;   //åœ¨ç”¨å«æ˜Ÿæ•°ç›®
+	Message_uPload_Buff[22]=GPS_Info_Data.sAtinfo_iNview;  //å¯è§å«æ˜Ÿæ•°ç›®
 	Crc=Crc16(Message_uPload_Buff,22);
 	Message_uPload_Buff[23]=Crc&0xff;
 	Message_uPload_Buff[24]=(Crc>>8)&0xff;

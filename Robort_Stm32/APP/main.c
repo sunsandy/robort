@@ -1,4 +1,4 @@
-#include "main.h"
+ï»¿#include "main.h"
 
 extern void nmea_decode_test(void);
 static void Hardware_Test(void);
@@ -6,8 +6,8 @@ static void Hardware_Test(void);
 
 App_Robort_Dat_Tag g_ProtocolData = {0};
     
-u8 u[17]="\r\nDMA ²âÊÔ³É¹¦\r\n";
-u8 w[17]="\r\nDMA ÖĞ¶Ï²âÊÔ\r\n";
+u8 u[17]="\r\nDMA æµ‹è¯•æˆåŠŸ\r\n";
+u8 w[17]="\r\nDMA ä¸­æ–­æµ‹è¯•\r\n";
 
 /****************************************************************************************
 // System clock is configured defaultly in /STARTUP/startup_stm32f10x_hd.s line 152,
@@ -15,7 +15,7 @@ u8 w[17]="\r\nDMA ÖĞ¶Ï²âÊÔ\r\n";
 //                                                                 
 //                                               -- GPIOA
 //                                              |-- GPIOC
-//                    --PreScale1 - APB2(72M) ¡ª | 
+//                    --PreScale1 - APB2(72M) â€” | 
 //                   |
 //                   |
 // HSE(8M)->PLL(9) - |--PreScale1 - HCLK(72M)
@@ -38,7 +38,7 @@ int main(void)
 	Robort_Uart_Init();
 	//Robort_GPS_Init(); 
 	//GPS_DATA_Init(); 
-//		printf("\r\nÏµÍ³³õÊ¼»¯Íê±Ï\r\n");
+//		printf("\r\nç³»ç»Ÿåˆå§‹åŒ–å®Œæ¯•\r\n");
     //Steer_Test( );
 
 	//assert_param(0);

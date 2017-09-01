@@ -1,7 +1,7 @@
-/**********************************************************************************************************
-**** FileName£ºApp_Protocol.c
+ï»¿/**********************************************************************************************************
+**** FileNameï¼šApp_Protocol.c
 **** 
-**** FileDescription£ºTerminal & robort protocol parse
+**** FileDescriptionï¼šTerminal & robort protocol parse
 ****		
 **** ProtocolDescription:
 ****
@@ -24,11 +24,11 @@
 ****  |                                                                                                                |
 ****  ------------------------------------------------------------------------------------------------------------------
 ****
-**** Author£ºSandy
+**** Authorï¼šSandy
 **** 
-**** Version£º1.0
+**** Versionï¼š1.0
 **** 
-**** Revision£º
+**** Revisionï¼š
 **** 
 **** 
 ***********************************************************************************************************/
@@ -343,17 +343,17 @@ static unsigned short Crc16(uint8 *ptr, int count)
 
 /*************************************************************************************************
 *****
-***** function£ºuint8  Protocol_Parser()
+***** functionï¼šuint8  Protocol_Parser()
 *****
-***** input£ºpdata -- pointer to protocol command received
+***** inputï¼špdata -- pointer to protocol command received
 *****        
 *****
 ***** output: none
 *****
-***** description£ºparse the protocol based on APP_ROBORT_CMD_TYPE
+***** descriptionï¼šparse the protocol based on APP_ROBORT_CMD_TYPE
 *****
 *****
-***** call£ºProcess_Robort_Direction_Cmd() -- parse robort's direction cmd 
+***** callï¼šProcess_Robort_Direction_Cmd() -- parse robort's direction cmd 
 *****       Process_Robort_Steer_Cmd() -- parse robort's steer cmd
 *****       Process_Robort_Light_Cmd() -- parse robort's light cmd
 *****       Process_Robort_Beep_Cmd()  --  parse robort's beep cmd
@@ -364,7 +364,7 @@ static unsigned short Crc16(uint8 *ptr, int count)
 ***** return:   0 -- error
 *****           1 -- ok
 *****
-***** author£ºSandy
+***** authorï¼šSandy
 *****				
 **************************************************************************************************/
 uint8 Protocol_Parser(App_Robort_Dat_Tag *pdata)
