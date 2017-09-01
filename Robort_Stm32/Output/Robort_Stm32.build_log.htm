@@ -26,15 +26,6 @@ Project File Date:  08/29/2017
 
 <h2>Output:</h2>
 Build target 'Robort_Stm32'
-compiling main.c...
-..\..\APP\main.c(48): warning:  #174-D: expression has no effect
-                __NOP; 
-..\..\APP\main.c(68): warning:  #177-D: variable "ProtocolData" was declared but never referenced
-        App_Robort_Dat_Tag ProtocolData = {0};
-..\..\APP\main.c(69): warning:  #177-D: variable "SensorEntry" was declared but never referenced
-        uSensorInfoTag SensorEntry = {0};
-..\..\APP\main.c: 3 warnings, 0 errors
-compiling App_Beep.c...
 compiling App_Light.c...
 ..\..\APP\App_Light.c(71): error:  #167: argument of type "GPIO_TypeDef *" is incompatible with parameter of type "uint8_t"
           STM32_GPIO_SetPin(GPIOA, GPIO_Pin_11, 1) : STM32_GPIO_SetPin(GPIOA, GPIO_Pin_11, 0);
@@ -89,11 +80,7 @@ compiling App_Motor.c...
 ..\..\APP\App_Motor.c(261): warning:  #69-D: integer conversion resulted in truncation
      STM32_GPIO_SetPin(GPIOC, GPIO_Pin_9, 1);
 ..\..\APP\App_Motor.c: 7 warnings, 12 errors
-compiling App_Protocol.c...
-..\..\APP\App_Protocol.c(272): warning:  #188-D: enumerated type mixed with another type
-                 fSensorType = pdata->Data[0]; //angle data
-..\..\APP\App_Protocol.c: 1 warning, 0 errors
-"..\..\Output\Robort_Stm32.axf" - 15 Error(s), 14 Warning(s).
+"..\..\Output\Robort_Stm32.axf" - 15 Error(s), 10 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   E:\gitHub\robort\Robort_Stm32\Project\RVMDK£¨uv4£©\RTE
