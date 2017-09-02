@@ -2767,6 +2767,7 @@ Image component sizes
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         56          0          0          0          0        993   app_beep.o
        124          6          0          0          0       2031   app_light.o
          8          0          0          0          0        471   app_message.o
@@ -2792,6 +2793,33 @@ Image component sizes
 
     ----------------------------------------------------------------------
       8592        642        336        140       1176     346236   Object Totals
+=======
+        26          0          0          0          0        447   app_beep.o
+        56          6          0          0          0        496   app_light.o
+         8          0          0          0          0        451   app_message.o
+       144          6          0          0          0        532   app_motor.o
+        84          0          0          0          0        472   app_steer.o
+       616         88          0          0          0       2250   bsp_gpio.o
+        60         10          0          2          0       1164   bsp_gps.o
+      1124         42          0          0          0       4342   bsp_pwm.o
+        76         20          0          8          0        673   bsp_systick.o
+       294         32          0          9          0       2439   bsp_timer.o
+      1030         90          0         11        150       6112   bsp_uart.o
+         0          0          0          0          0       4504   core_cm3.o
+        98          4          0         56          0       6832   main.o
+       172         22          0          0          0       2033   misc.o
+        36          8        304          0       1024        856   startup_stm32f10x_hd.o
+       506         26          0          0          0       5079   stm32f10x_dma.o
+       286          0          0          0          0       2996   stm32f10x_gpio.o
+        74         26          0          0          0       4732   stm32f10x_it.o
+       372         50          0         20          0       6096   stm32f10x_rcc.o
+       972         92          0          0          0      11172   stm32f10x_tim.o
+       616         28          0          0          0       7223   stm32f10x_usart.o
+       328         28          0         20          0     259045   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+      7000        578        336        132       1176     329946   Object Totals
+>>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
 =======
         26          0          0          0          0        447   app_beep.o
         56          6          0          0          0        496   app_light.o
@@ -2905,10 +2933,13 @@ Image component sizes
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      12364        748        336        144       1176     341612   Grand Totals
      12364        748        336        144       1176     341612   ELF Image Totals
      12364        748        336        144          0          0   ROM Totals
 =======
+=======
+>>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
 =======
 >>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
      10660        684        336        136       1176     326238   Grand Totals

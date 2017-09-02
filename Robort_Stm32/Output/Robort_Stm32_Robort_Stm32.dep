@@ -1,6 +1,7 @@
 Dependencies for Project 'Robort_Stm32', Target 'Robort_Stm32': (DO NOT MODIFY !)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 F (..\..\Libraries\CMSIS\startup\startup_stm32f10x_hd.s)(0x59A41671)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Users\kangs\Documents\GitHub\robort\Robort_Stm32\Project\RVMDK£¨uv4£©\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5--pd "__UVISION_VERSION SETA 514" --pd "STM32F10X_MD SETA 1"--list ..\..\listing\startup_stm32f10x_hd.lst --xref -o ..\..\output\startup_stm32f10x_hd.o --depend ..\..\output\startup_stm32f10x_hd.d)
 F (..\..\Libraries\CMSIS\core_cm3.c)(0x59A41671)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\..\Libraries\CMSIS -I..\..\APP -I..\..\Libraries\FWlib\inc -I..\..\APP\Led -I..\..\APP\TimBase -I..\..\BSP -I..\..\nmea_decode\include-I C:\Users\kangs\Documents\GitHub\robort\Robort_Stm32\Project\RVMDK£¨uv4£©\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\..\output\core_cm3.o --omf_browse ..\..\output\core_cm3.crf --depend ..\..\output\core_cm3.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -353,6 +354,8 @@ I (..\..\Libraries\FWlib\inc\misc.h)(0x59A41671)
 =======
 =======
 >>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
+=======
+>>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
 F (..\..\Libraries\CMSIS\startup\startup_stm32f10x_hd.s)(0x57C95B43)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I E:\gitHub\robort\Robort_Stm32\Project\RVMDK£¨uv4£©\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 514" --pd "STM32F10X_MD SETA 1"--list ..\..\listing\startup_stm32f10x_hd.lst --xref -o ..\..\output\startup_stm32f10x_hd.o --depend ..\..\output\startup_stm32f10x_hd.d)
 F (..\..\Libraries\CMSIS\core_cm3.c)(0x5243E144)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\..\Libraries\CMSIS -I..\..\APP -I..\..\Libraries\FWlib\inc -I..\..\APP\Led -I..\..\APP\TimBase -I..\..\BSP -I..\..\nmea_decode\include-I E:\gitHub\robort\Robort_Stm32\Project\RVMDK£¨uv4£©\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\..\output\core_cm3.o --omf_browse ..\..\output\core_cm3.crf --depend ..\..\output\core_cm3.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -703,6 +706,9 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x5243E144)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x5243E144)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x5243E148)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
+=======
 >>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
 =======
 >>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
@@ -777,6 +783,7 @@ I (..\..\APP\App_Steer.h)(0x599818C2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 I (..\..\BSP\BSP_Pwm.h)(0x59A41671)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x59A41D69)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x59A41671)
@@ -842,6 +849,8 @@ I (..\..\nmea_decode\include\nmea/./config.h)(0x59A41674)
 =======
 =======
 >>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
+=======
+>>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
 I (..\..\BSP\BSP_Pwm.h)(0x57011360)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x598B12DA)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x5243E144)
@@ -905,6 +914,9 @@ I (..\..\BSP\BSP_GPS.h)(0x57F79014)
 I (..\..\nmea_decode\include\nmea/nmea.h)(0x54F2749A)
 I (..\..\nmea_decode\include\nmea/./config.h)(0x54F27498)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
+=======
 >>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
 =======
 >>>>>>> f6229d62eb2bc2af851e2a65620a080023095e61
