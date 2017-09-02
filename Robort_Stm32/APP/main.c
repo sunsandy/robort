@@ -82,10 +82,8 @@ static void Hardware_Test()
 	
 #ifdef _ENABLE_MODULE_4
 	Robort_Debug_Func[MODULE_STEER]();
-#endif
-	
-	
-	
+#endif	
+{//测试函数原注释代码
 //	while (1)
 //	{
 //		Robort_Light_Control( ROBORT_LIGHT_ONE, ROBORT_LIGHT_ON);
@@ -163,29 +161,64 @@ static void Hardware_Test()
 
 ////     Robort_Receive_Frame(&ProtocolData);
 ////     Robort_Send_Frame((void *)&ProtocolData);
-//     
+//   
+}
     
 }
 
 static void Robort_Light_Test(void)
 {
-	
+	Robort_Light_Control( ROBORT_LIGHT_ONE, ROBORT_LIGHT_ON);
+//	Robort_Light_Control( ROBORT_LIGHT_TWO, ROBORT_LIGHT_ON);
+	delay_ms(1000);
+	Robort_Light_Control( ROBORT_LIGHT_ONE, ROBORT_LIGHT_OFF);
+//	Robort_Light_Control( ROBORT_LIGHT_TWO, ROBORT_LIGHT_OFF);
+	delay_ms(1000);
 }
 
 static void Robort_Beep_Test(void)
 {
-	
+	Robort_Beep_Control(ROBORT_BEEP_ON);
+	delay_ms(1000);
+	Robort_Beep_Control(ROBORT_BEEP_OFF);
+	delay_ms(1000);	
 }
 
 
 static void Robort_Motor_Test(void)
-{
+{	
+	Robort_Direction_Control(ROBORT_STOP, 0);
+	delay_ms(10000);
+
+	Robort_Direction_Control(ROBORT_BACK, 50);
+	delay_ms(10000);
 	
+	Robort_Direction_Control(ROBORT_FORWARD, 60);
+	delay_ms(10000);
+
+	Robort_Direction_Control(ROBORT_LEFT, 50);
+	delay_ms(10000);
+
+	Robort_Direction_Control(ROBORT_RIGHT, 50);
+	delay_ms(1000);
+
+	Robort_Direction_Control(ROBORT_STOP, 0);
+	delay_ms(10000);
 }
 
 static void Robort_Steer_Test(void)
 {
-	
+	Robort_Steer_Control(ROBORT_STEER1,  0); //Stay 0 angle
+	Robort_Steer_Control(ROBORT_STEER2,  0); //Stay 0 angle
+	delay_ms(2000);
+
+	Robort_Steer_Control(ROBORT_STEER1,  90); //Stay 90 angle
+	Robort_Steer_Control(ROBORT_STEER2,  90); //Stay 90 angle
+	delay_ms(2000);
+
+	Robort_Steer_Control(ROBORT_STEER1,  180); //Stay 90 angle
+	Robort_Steer_Control(ROBORT_STEER2,  180); //Stay 90 angle
+	delay_ms(2000);
 }
 
 /******************* (C) COPYRIGHT 2015 X-SPACE *****END OF FILE****/
