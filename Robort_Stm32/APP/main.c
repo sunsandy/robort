@@ -16,10 +16,12 @@ u8 w[20]="\r\nDMA 中断测试\r\n";
 //                                               -- GPIOA
 //                                              |-- GPIOC
 //                    --PreScale1 - APB2(72M) — | 
-//                   |
-//                   |
-// HSE(8M)->PLL(9) - |--PreScale1 - HCLK(72M)
-//                   |
+//                   |                          
+//                   |                           -- DIV8 - SYSClock(9M)
+//                   |                          |
+// HSE(8M)->PLL(9) - |--PreScale1 - HCLK(72M) - |
+//                   |                          |
+//                   |                          
 //                   |                          -- 72M(2x) -- TIMER2
 //                   |                         |
 //                   |__PreScale2 - APB1(36M) -|
@@ -27,9 +29,8 @@ u8 w[20]="\r\nDMA 中断测试\r\n";
 //
 *****************************************************************************************/
 int main(void)
-{
-	  
-	delay_init();
+{  
+	SysDelay_Init();
 	TIMER_Init();
 	Robort_Beep_Init();
 	Robort_Light_Init();

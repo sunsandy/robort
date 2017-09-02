@@ -1,4 +1,4 @@
-﻿#ifndef _APP_MAIN_H
+#ifndef _APP_MAIN_H
 #define _APP_MAIN_H
 
 #include "Common.h" 
@@ -10,6 +10,7 @@
 #include "App_Protocol.h"
 #include "App_Message.h"
 #include "APP_GPS.H"
+#include "App_SysDelay.h"
 /******************************/
 #include "BSP_GPS.h"
 #include <string.h>

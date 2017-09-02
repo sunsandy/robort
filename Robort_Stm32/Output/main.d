@@ -48,3 +48,10 @@
 ..\..\output\main.o: ..\..\nmea_decode\include\nmea/./parse.h
 ..\..\output\main.o: ..\..\nmea_decode\include\nmea/./parser.h
 ..\..\output\main.o: ..\..\nmea_decode\include\nmea/./context.h
+..\..\output\main.o: ..\..\APP\App_SysDelay.h
+..\..\output\main.o: ..\..\BSP\BSP_Systick.h
+..\..\output\main.o: ..\..\APP\Common.h
+..\..\output\main.o: ..\..\BSP\BSP_Led.h
+..\..\output\main.o: ..\..\BSP\BSP_Timer.h
+..\..\output\main.o: ..\..\BSP\BSP_Systick.h
+..\..\output\main.o: ..\..\BSP\BSP_Pantilt.h

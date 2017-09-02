@@ -11,7 +11,7 @@ static u32 fac_systic = 0;
 void delay_init()	 
 {
 	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);	//选择外部时钟  HCLK/8
-	fac_us=SystemCoreClock/8000000;	//为系统时钟的1/8  
+	fac_us=SystemCoreClock/8000000;	//system ticks per us
 	fac_ms=(u16)fac_us*1000;//代表每个ms需要的systick时钟数   
 	fac_systic = 1;
 }								    
